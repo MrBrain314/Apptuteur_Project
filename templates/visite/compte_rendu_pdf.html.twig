@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Compte-rendu de visite</title>
+
+    <style>
+        body {
+            font-family: DejaVu Sans, sans-serif;
+            margin: 40px;
+            font-size: 14px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #029c62;
+            border-bottom: 2px solid #029c62;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 5px;
+            border-radius: 6px;
+            background: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Compte-rendu de visite</h1>
+
+<div class="section">
+    <span class="label">Étudiant :</span><br>
+    <div class="box">
+        {{ visite.etudiant.prenom }} {{ visite.etudiant.nom }}
+    </div>
+</div>
+
+<div class="section">
+    <span class="label">Date :</span><br>
+    <div class="box">
+        {{ visite.date|date('d/m/Y H:i') }}
+    </div>
+</div>
+
+<div class="section">
+    <span class="label">Commentaire :</span><br>
+    <div class="box">
+        {{ visite.commentaire }}
+    </div>
+</div>
+
+<div class="section">
+    <span class="label">Statut :</span><br>
+    <div class="box">
+        {{ visite.statut.value|capitalize }}
+    </div>
+</div>
+
+<div class="section">
+    <span class="label">Compte-rendu :</span><br>
+    <div class="box">
+        {{ visite.compteRendu|nl2br }}
+    </div>
+</div>
+
+</body>
+</html>

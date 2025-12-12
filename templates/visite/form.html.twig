@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ form.vars.value.id ? 'Modifier une visite' : 'Ajouter une visite' }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+
+    <!-- Bandeau titre vert -->
+    <div class="p-4 mb-4 rounded shadow-lg text-white"
+         style="background: linear-gradient(90deg, #029c62, #13c38b); border-radius: 12px;">
+        <h1 class="m-0 fw-bold">
+            {{ form.vars.value.id ? 'Modifier une visite' : 'Ajouter une visite' }}
+            <span class="fw-light">— {{ etudiant.prenom }} {{ etudiant.nom }}</span>
+        </h1>
+    </div>
+
+    <!-- Carte du formulaire -->
+    <div class="card shadow-lg border-0" style="border-radius: 12px;">
+        <div class="card-body p-4">
+
+            {% set form_without_token = form|filter(f => f.vars.name not in ['_token']) %}
+
+            {{ form_start(form, {'render_rest': false}) }}
+
+            <div class="row g-4">
+                {% for field in form_without_token %}
+                    <div class="col-md-12">
+                        <label class="form-label fw-semibold">
+                            {{ field.vars.label }}
+                        </label>
+                        {{ form_widget(field, {'attr': {'class': 'form-control form-control-lg shadow-sm'}}) }}
+                        <div class="text-danger small mt-1">{{ form_errors(field) }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Bouton principal vert -->
+            <button class="btn w-100 mt-4 py-2 fw-semibold text-white shadow"
+                    style="background: linear-gradient(90deg, #029c62, #13c38b); border-radius: 8px;">
+                {{ form.vars.value.id ? 'Modifier la visite' : 'Ajouter la visite' }}
+            </button>
+
+            {{ form_end(form, {'render_rest': false}) }}
+        </div>
+    </div>
+
+    <!-- Retour -->
+    <a href="{{ path('visites_list', {'id': etudiant.id}) }}"
+       class="btn btn-secondary mt-4 shadow-sm px-4">
+        ← Retour à la liste des visites
+    </a>
+
+</div>
+{% endblock %}

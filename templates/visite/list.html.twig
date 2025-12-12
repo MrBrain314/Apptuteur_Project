@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Visites de {{ etudiant.prenom }} {{ etudiant.nom }}{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1>Visites de {{ etudiant.prenom }} {{ etudiant.nom }}</h1>
+    <a href="{{ path('visite_new', {'id': etudiant.id}) }}" class="btn btn-primary">Ajouter une visite</a>
+</div>
+
+<form method="get" class="mb-3 row g-2 align-items-center">
+    <div class="col-auto">
+        <label for="statut" class="col-form-label">Filtrer par statut :</label>
+    </div>
+    <div class="col-auto">
+        <select name="statut" id="statut" class="form-select">
+            <option value="toutes" {{ statut == 'toutes' ? 'selected' : '' }}>Toutes</option>
+            <option value="prévue" {{ statut == 'prévue' ? 'selected' : '' }}>Prévue</option>
+            <option value="réalisée" {{ statut == 'réalisée' ? 'selected' : '' }}>Réalisée</option>
+            <option value="annulée" {{ statut == 'annulée' ? 'selected' : '' }}>Annulée</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Filtrer</button>
+    </div>
+</form>
+
+<table class="table table-striped table-hover align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>
+                Date
+                <a href="{{ path('visites_list', {'id': etudiant.id, 'statut': statut, 'sort': 'asc'}) }}">↑</a>
+                <a href="{{ path('visites_list', {'id': etudiant.id, 'statut': statut, 'sort': 'desc'}) }}">↓</a>
+            </th>
+            <th>Commentaire</th>
+            <th>Compte-rendu</th>
+            <th>Statut</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for visite in visites %}
+            <tr>
+                <td>{{ visite.date|date('d/m/Y H:i') }}</td>
+                <td>{{ visite.commentaire }}</td>
+                <td>{{ visite.compteRendu }}</td>
+                <td>{{ visite.statut.value|capitalize }}</td>
+                <td>
+                    <a href="{{ path('visite_edit', {'id': visite.id}) }}" class="btn btn-warning btn-sm">Modifier</a>
+                    <a href="{{ path('visite_compte_rendu', {'id': visite.id}) }}" class="btn btn-info btn-sm">Compte-rendu</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5" class="text-center">Aucune visite pour cet étudiant.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{{ path('etudiants_list') }}" class="btn btn-secondary mt-3">Retour à la liste des étudiants</a>
+{% endblock %}

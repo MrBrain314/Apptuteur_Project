@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2>Connexion Tuteur</h2>
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST">
+        <div class="mb-3">
+            <label>Email</label>
+            <input name="email" type="email" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Password (non vérifié)</label>
+            <input name="password" type="password" class="form-control">
+        </div>
+
+        <button class="btn btn-primary">Se connecter</button>
+    </form>
+</div>
+{% endblock %}

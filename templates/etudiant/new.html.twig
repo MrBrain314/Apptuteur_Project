@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ etudiant is defined ? 'Modifier l’étudiant' : 'Ajouter Étudiant' }}{% endblock %}
+
+{% block body %}
+
+<div class="d-flex justify-content-center mt-4">
+    <div class="card shadow-lg p-4" style="max-width: 700px; width: 100%; border-radius: 10px;">
+        
+        <!-- Bandeau vert titre -->
+        <div class="text-white text-center py-3 mb-4" 
+             style="background: linear-gradient(90deg, #029c62, #13c38b); border-radius: 8px;">
+            <h3 class="m-0">
+                {{ etudiant is defined ? 'Modifier l’étudiant' : 'Ajouter Étudiant' }}
+            </h3>
+        </div>
+
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+            <div class="mb-3">
+                {{ form_label(form.nom) }}
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.nom) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.prenom) }}
+                {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.prenom) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(form.formation) }}
+                {{ form_widget(form.formation, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.formation) }}
+            </div>
+
+            <div class="mt-4">
+                <button class="btn btn-success w-100">
+                    {{ etudiant is defined ? 'Enregistrer' : 'Ajouter' }}
+                </button>
+            </div>
+
+        {{ form_end(form, {'render_rest': false}) }}
+
+        <!-- Retour -->
+        <div class="text-center mt-3">
+            <a href="{{ path('etudiants_list') }}" class="btn btn-light">
+                <i class="bi bi-arrow-left"></i> Retour à la liste
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

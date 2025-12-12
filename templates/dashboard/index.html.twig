@@ -1,0 +1,179 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+{% block body %}
+
+<style>
+
+    /* En-tête premium avec fond coloré */
+    .dashboard-header {
+        background: linear-gradient(90deg, #029c62, #13c38b);
+        color: white;
+        padding: 22px 20px;
+        border-radius: 8px;
+        margin-bottom: 35px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .dashboard-header h2 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 26px;
+    }
+
+    .dashboard-header p {
+        margin: 5px 0 0;
+        font-size: 15px;
+    }
+
+
+
+    /* Cards minimalistes */
+    .dashboard-card {
+        background: white;
+        border-radius: 10px;
+        border: 1px solid #e8e8e8;
+        padding: 0;
+        margin-bottom: 30px;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    }
+
+    /* TITRE AVEC COULEUR DE FOND */
+    .card-title-colored {
+        background: #029c62;
+        color: white;
+        padding: 12px 18px;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+
+
+    /* Tables */
+    .premium-table thead {
+        background: #029c62;
+        color: white;
+    }
+
+    .premium-table th {
+        padding: 12px;
+        font-weight: 600;
+    }
+
+    .premium-table td {
+        padding: 12px;
+        vertical-align: middle;
+    }
+
+    .premium-table tbody tr:hover {
+        background: #f3fdf7;
+    }
+
+
+
+    /* Badges */
+    .badge-green {
+        background: #e7fff2;
+        color: #029c62;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+</style>
+
+
+
+<!-- HEADER -->
+<div class="dashboard-header">
+    <h2>Tableau de bord</h2>
+    <p>Bienvenue {{ tuteur.prenom }} {{ tuteur.nom }}</p>
+</div>
+
+
+
+<div class="container">
+
+    <!-- Informations tuteur -->
+    <div class="dashboard-card">
+        <div class="card-title-colored">Informations du tuteur</div>
+
+        <div class="card-content">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Email :</strong> {{ tuteur.email }}</li>
+                <li class="list-group-item"><strong>Téléphone :</strong> {{ tuteur.telephone }}</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- Étudiants suivis -->
+    <div class="dashboard-card">
+        <div class="card-title-colored">Étudiants suivis</div>
+
+        <div class="card-content">
+            <table class="table premium-table">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Formation</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for etudiant in etudiants %}
+                    <tr>
+                        <td>{{ etudiant.nom }}</td>
+                        <td>{{ etudiant.prenom }}</td>
+                        <td><span class="badge-green">{{ etudiant.formation }}</span></td>
+                    </tr>
+                {% else %}
+                    <tr><td colspan="3" class="text-center text-muted">Aucun étudiant suivi.</td></tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- Prochaines visites -->
+    <div class="dashboard-card">
+        <div class="card-title-colored">Prochaines visites prévues</div>
+
+        <div class="card-content">
+            <table class="table premium-table">
+                <thead>
+                <tr>
+                    <th>Étudiant</th>
+                    <th>Date</th>
+                    <th>Commentaire</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for visite in prochainesVisites %}
+                    <tr>
+                        <td>{{ visite.etudiant.prenom }} {{ visite.etudiant.nom }}</td>
+                        <td>{{ visite.date|date('d/m/Y H:i') }}</td>
+                        <td>{{ visite.commentaire }}</td>
+                    </tr>
+                {% else %}
+                    <tr><td colspan="3" class="text-center text-muted">Aucune visite prévue.</td></tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

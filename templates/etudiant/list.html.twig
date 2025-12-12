@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Étudiants{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Liste des étudiants</h1>
+    <a href="{{ path('etudiant_new') }}" class="btn btn-primary">Ajouter un étudiant</a>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead class="table-light">
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Formation</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for etudiant in etudiants %}
+            <tr>
+                <td>{{ etudiant.nom }}</td>
+                <td>{{ etudiant.prenom }}</td>
+                <td>{{ etudiant.formation }}</td>
+                <td class="text-center">
+                    <a href="{{ path('visites_list', {'id': etudiant.id}) }}" class="btn btn-info btn-sm">Voir visites</a>
+                    <a href="{{ path('visite_new', {'id': etudiant.id}) }}" class="btn btn-success btn-sm">Ajouter visite</a>
+                    <a href="{{ path('etudiant_edit', {'id': etudiant.id}) }}" class="btn btn-warning btn-sm">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" class="text-center">Aucun étudiant pour le moment.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

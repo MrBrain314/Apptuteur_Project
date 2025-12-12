@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compte-rendu de visite{% endblock %}
+
+{% block body %}
+
+<div class="d-flex justify-content-center mt-4">
+    <div class="card shadow-lg p-4" style="max-width: 800px; width: 100%; border-radius: 10px;">
+
+        <!-- Bandeau vert -->
+        <div class="text-white text-center py-3 mb-4"
+             style="background: linear-gradient(90deg, #029c62, #13c38b); border-radius: 8px;">
+            <h3 class="m-0">Compte-rendu de la visite</h3>
+        </div>
+
+        <!-- Informations -->
+        <ul class="list-group mb-4">
+            <li class="list-group-item">
+                <strong>Étudiant :</strong> {{ visite.etudiant.prenom }} {{ visite.etudiant.nom }}
+            </li>
+            <li class="list-group-item">
+                <strong>Date :</strong> {{ visite.date|date('d/m/Y H:i') }}
+            </li>
+            <li class="list-group-item">
+                <strong>Commentaire :</strong> {{ visite.commentaire }}
+            </li>
+            <li class="list-group-item">
+                <strong>Statut :</strong> {{ visite.statut.value|capitalize }}
+            </li>
+        </ul>
+
+        <!-- Formulaire -->
+        {{ form_start(form) }}
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Compte-rendu :</label>
+                {{ form_widget(form.compteRendu, {
+                    'attr': {
+                        'class': 'form-control',
+                        'rows': 4 ,            # ➜ plus grand en hauteur
+                        'style': 'resize: vertical; font-size: 15px;'
+                    }
+                }) }}
+            </div>
+
+            <button class="btn btn-success w-100">Enregistrer le compte-rendu</button>
+
+        {{ form_end(form) }}
+
+
+        <!-- Actions -->
+        <div class="text-center mt-4">
+            <a href="{{ path('visite_compte_rendu_pdf', {'id': visite.id}) }}" class="btn btn-primary me-2">
+                Exporter en PDF
+            </a>
+
+            <a href="{{ path('visites_list', {'id': visite.etudiant.id}) }}" class="btn btn-light">
+                ← Retour aux visites
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
