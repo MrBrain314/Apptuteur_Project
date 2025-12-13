@@ -109,7 +109,6 @@ Utiliser l’email alice.durand@example.com et n’importe quel mot de passe (po
 
 
 ##  Captures d'écran
-
 |        DASHBOARD        |          LOGIN         |        ETUDIANTS       |      AJOUT ETUDIANT      |
 | :---------------------: | :------------------: | :------------------: | :--------------------: |
 | <img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/DASHBOARD.png?raw=true" width="300"> | <img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Login.png?raw=true" width="300"> | <img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Etudiants.png?raw=true" width="300"> | <img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Ajout%20Etudiant.png?raw=true" width="300"> |
@@ -120,13 +119,15 @@ Utiliser l’email alice.durand@example.com et n’importe quel mot de passe (po
 
 |       COMPTE RENDU        |       COMPTE RENDU PDF       |
 | :---------------------: | :---------------------: |
-| <img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20.png?raw=true" width="300"> | <img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20PDF.png?raw=true" width="300"> |
+| <div align="center"><img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20.png?raw=true" width="300"></div> | <div align="center"><img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20PDF.png?raw=true" width="300"></div> |
+
 
 
 ## Contributeurs
 
 - Bastou OURO-TAGBA
 - Sidiya KHABAZ
+
 
 
 
