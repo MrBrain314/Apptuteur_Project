@@ -110,8 +110,22 @@ Utiliser l’email alice.durand@example.com et n’importe quel mot de passe (po
 
 ##  Captures d'écran
 
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/DASHBOARD.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Login.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Etudiants.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Ajout%20Etudiant.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Modifier%20Etudiant.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Les%20visites.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Ajouter%20une%20visites.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Modifier%20une%20visite.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20PDF.png?raw=true)
+![Dashboard]()
+
+
 
 ## Contributeurs
 
-### Bastou OURO-TAGBA
-### Sidiya KHABAZ
+Bastou OURO-TAGBA
+Sidiya KHABAZ
+
