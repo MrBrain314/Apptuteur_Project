@@ -110,35 +110,24 @@ Utiliser l’email alice.durand@example.com et n’importe quel mot de passe (po
 
 ##  Captures d'écran
 
-<div align="center">
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/DASHBOARD.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Login.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Etudiants.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Ajout%20Etudiant.png?raw=true)
 
-<!-- Ligne 1 -->
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/DASHBOARD.png?raw=true" width="23%" />
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Login.png?raw=true" width="23%" />
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Etudiants.png?raw=true" width="23%" />
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Ajout%20Etudiant.png?raw=true" width="23%" />
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Modifier%20Etudiant.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Les%20visites.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Ajouter%20une%20visites.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Modifier%20une%20visite.png?raw=true)
 
-<br><br>
-
-<!-- Ligne 2 -->
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Modifier%20Etudiant.png?raw=true" width="23%" />
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Les%20visites.png?raw=true" width="23%" />
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Ajouter%20une%20visites.png?raw=true" width="23%" />
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Modifier%20une%20visite.png?raw=true" width="23%" />
-
-<br><br>
-
-<!-- Ligne 3 -->
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20.png?raw=true" width="35%" />
-<img src="https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20PDF.png?raw=true" width="35%" />
-
-</div>
-
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20.png?raw=true)
+![Dashboard](https://github.com/MrBrain314/Apptuteur_Project/blob/main/Captures/Compte%20rendu%20PDF.png?raw=true)
 
 
 ## Contributeurs
 
-Bastou OURO-TAGBA
-Sidiya KHABAZ
+- Bastou OURO-TAGBA
+- Sidiya KHABAZ
+
 
 
