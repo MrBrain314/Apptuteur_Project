@@ -70,11 +70,12 @@ docker exec -it symfony_app bash
 cd apptuteur
 composer install
 ```
+
+##  Démarrer le serveur Symfony
+
 ### 6. Accéder à la base de données via l’interface graphique
 
 http://localhost:8000/
-
-##  Démarrer le serveur Symfony
 
 ### 7. Lancer le serveur
 
@@ -127,6 +128,7 @@ Utiliser l’email alice.durand@example.com et n’importe quel mot de passe (po
 
 - Bastou OURO-TAGBA
 - Sidiya KHABAZ
+
 
 
 
