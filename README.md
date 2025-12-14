@@ -72,7 +72,7 @@ composer install
 ```
 ### 6. Accéder à la base de données via l’interface graphique
 
-http://localhost:8081/
+http://localhost:8000/
 
 ##  Démarrer le serveur Symfony
 
@@ -127,6 +127,7 @@ Utiliser l’email alice.durand@example.com et n’importe quel mot de passe (po
 
 - Bastou OURO-TAGBA
 - Sidiya KHABAZ
+
 
 
 
